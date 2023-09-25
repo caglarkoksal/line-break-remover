@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove Line Breaks</title>
+</head>
+<body>
+    <h1>Remove Line Breaks from Text</h1>
+    <textarea id="inputText" rows="10" cols="50" placeholder="Paste your text here..."></textarea><br>
+    <button onclick="removeLineBreaks()">Remove Line Breaks</button>
+    <h2>Processed Text:</h2>
+    <textarea id="outputText" rows="10" cols="50"></textarea><br>
+    <button onclick="copyToClipboard()">Copy to Clipboard</button>
+
+    <script>
+        function removeLineBreaks() {
+            var inputText = document.getElementById("inputText").value;
+            var newText = inputText.replace(/(\r\n|\n|\r)/gm," ");
+            newText = newText.replace(/\s+/g, " ");
+            document.getElementById("outputText").value = newText;
+        }
+
+        function copyToClipboard() {
+            var outputText = document.getElementById("outputText");
+            outputText.select();
+            document.execCommand("copy");
+        }
+    </script>
+</body>
+</html>
