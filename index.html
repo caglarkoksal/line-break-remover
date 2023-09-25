@@ -7,10 +7,11 @@
 </head>
 <body>
     <h1>Remove Line Breaks from Text</h1>
-    <textarea id="inputText" rows="10" cols="50" placeholder="Paste your text here..."></textarea><br>
+    <textarea id="inputText" rows="10" cols="50" placeholder="Paste your text here..." onclick="this.select()"></textarea><br>
     <button onclick="removeLineBreaks()">Remove Line Breaks</button>
+    <button onclick="resetText()">Reset</button><br>
     <h2>Processed Text:</h2>
-    <textarea id="outputText" rows="10" cols="50"></textarea><br>
+    <textarea id="outputText" rows="10" cols="50" onclick="this.select()"></textarea><br>
     <button onclick="copyToClipboard()">Copy to Clipboard</button>
 
     <script>
@@ -19,6 +20,10 @@
             var newText = inputText.replace(/(\r\n|\n|\r)/gm," ");
             newText = newText.replace(/\s+/g, " ");
             document.getElementById("outputText").value = newText;
+        }
+
+        function resetText() {
+            document.getElementById("inputText").value = "";
         }
 
         function copyToClipboard() {
