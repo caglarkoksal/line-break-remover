@@ -8,9 +8,9 @@ The idea for this tool was inspired by TextFixer's tutorial on JavaScript Line B
 This tool was developed with the help of OpenAI's ChatGPT. ChatGPT was instrumental in guiding the design and JavaScript functionality of the tool.
 
 **How to Use**
-Navigate to the tool on GitHub Pages (insert your GitHub Pages link here).
-Paste your text into the top text box.
-Click on "Remove Line Breaks" to process the text.
-The processed text will appear in the box below.
-You can copy the processed text to the clipboard using the "Copy to Clipboard" button.
-If you need to clear the input box, click the "Reset" button.
+1. Navigate to the tool on GitHub Pages (insert your GitHub Pages link here).
+2. Paste your text into the top text box.
+3. Click on "Remove Line Breaks" to process the text.
+4. The processed text will appear in the box below.
+5. You can copy the processed text to the clipboard using the "Copy to Clipboard" button.
+6. If you need to clear the input box, click the "Reset" button.
